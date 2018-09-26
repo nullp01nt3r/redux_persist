@@ -62,7 +62,7 @@ class DocumentFileEngine implements StorageEngine {
   save(String json) async {
     final file = await _getFile();
     // Write as json
-    await file.writeAsString(json);
+    await file.writeAsString("$json}}}");
   }
 
   Future<File> _getFile() async {
